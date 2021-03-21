@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="xunit.runner.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="xunit.runner.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Harpy.IoC" Version="1.0.9.6" />
+    <PackageReference Include="Harpy.IoC.SQLite" Version="1.0.9.6" />
+    <PackageReference Include="Harpy.Presentation" Version="1.0.9.6" />
+    <PackageReference Include="Harpy.Presentation.SQLite" Version="1.0.9.6" />
+    <PackageReference Include="Harpy.Test.Domain" Version="1.0.9.6" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.6.1" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="Xunit.DependencyInjection" Version="7.1.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.collector" Version="1.3.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Exemple.Application\Exemple.Application.csproj" />
+    <ProjectReference Include="..\Exemple.Infrastructure.CrossCutting.IoC\Exemple.Infrastructure.CrossCutting.IoC.csproj" />
+  </ItemGroup>
+
+</Project>
+
+
+
+
